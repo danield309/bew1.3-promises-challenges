@@ -1,8 +1,21 @@
 {
-    "name": "promises-challenges",
-    "scripts": {},
-    "dependencies": {
-        "request": "^2.88.2"
-    },
-    "devDependencies": {}
+  "name": "promises-challenges",
+  "scripts": {},
+  "dependencies": {
+    "request": "^2.88.2"
+  },
+  "devDependencies": {},
+  "description": "1. Clone this repository to your computer. Navigate to the new directory in a Terminal window.\r 1. Run `git remote remove origin` to disconnect from the class repo. Also, run `npm install` to install any necessary packages included in `package.json`.\r 1. Go to [GitHub.com](https://github.com) and create a new repository for your code (do not initialize with a `README`). Follow the instructions to add a new remote called 'origin' to your new repository.\r 1. Navigate to each of the four Challenge files and follow the instructions in each.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danield309/bew1.3-promises-challenges.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danield309/bew1.3-promises-challenges/issues"
+  },
+  "homepage": "https://github.com/danield309/bew1.3-promises-challenges#readme"
 }

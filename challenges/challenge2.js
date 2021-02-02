@@ -6,16 +6,16 @@
  * 1. Read over the code that follows. What will be printed to the console when
  *    it runs? Run the code using `node challenge2.js` and verify that your
  *    expectation was correct.
- * 
+ *    - I think it will print Hello there, Ducky and then 1500ms later MAKE SCHOOL IS AWESOME!
  * 
  * 2. What happens if greet() fails? Make it fail by changing 'name' to a number
  *    instead of a string. What happens? Does uppercaser() still run?
- * 
+ *    - It printed out Hello there, 3 also the uppercaser worked.
  * 
  * 3. What happens if greet() succeeds and uppercaser() fails? Modify your code
  *    to achieve this result by changing the values of 'name' and 'my_str' and
  *    run the code again.
- * 
+ *    - Greet still works uppercaser printed out a number.
  * 
  * 4. Write a method that takes a string as input and returns the input string
  *    with a space added between each character. E.g. 'foo' -> 'f o o'
@@ -63,9 +63,20 @@ function uppercaser(str) {
     });
 }
 
+function spacer(str){
+  return new Promise(function(resolve, reject){
+    setTimeout(function() {
+      if (typeof str === 'string') { 
+        resolve(str.split("").join(" "));
+      } else {
+        reject('Argument to spacer must be a string');
+      }
+    }, 1000);
+  })
+}
 name = 'Ducky'
-my_str = 'Make School is Awesome!!!'
-
+my_str = 'Make School is Awesome'
+new_str = 'foo'
 greet(name)
     .then((greetResult) => {
         console.log(greetResult)
@@ -73,7 +84,11 @@ greet(name)
     })
     .then((uppercaserResult) => {
         console.log(uppercaserResult)
-    }).catch((err) => {
+        return spacer(new_str)
+    })
+    .then((spacerResult) => {
+        console.log(spacerResult)
+      }).catch((err) => {
         console.log('Received an error!')
         console.log(err);
     });
